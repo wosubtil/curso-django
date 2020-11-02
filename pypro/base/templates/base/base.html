@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Python Pro</title>
+    <title>{% block title %}Python Pro{% endblock title%}</title>
 
-    <meta name="description" content="Pagina do curso Python Pro">
+    <meta name="description" content="{% block description %}Pagina do curso Python Pro{%endblock description%}">
     <meta name="author" content="Welinton Subtil">
 
 	<link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}" />
@@ -32,48 +32,8 @@
 			</ul>
 		</div>
 	</nav>
-    <div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="jumbotron">
-					<h2>
-						Curso de Python com Luciano Ramalho
-					</h2>
-					<h4 class="mt-4">Entre na lista de espera</h4>
-					<form class="form-inline validate" action="https://dev.us2.list-manage.com/subscribe/post?u=07ff99f4483196c79d1ad6da4&amp;id=40e4f6405a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
-					  <div class="form-group mb-2">
-						<input type="email" value="" name="EMAIL" class="form-control required" id="mce-EMAIL" placeholder="E-mail">
-					  </div>
-					  <div class="form-group mb-2 ml-2">
-						<input type="text" value="" name="FNAME" class="form-control" id="mce-FNAME" placeholder="Nome">
-					  </div>
 
-						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_07ff99f4483196c79d1ad6da4_40e4f6405a" tabindex="-1" value=""></div>
-					  <div class="form-group mb-2 ml-2">
-						  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary">
-					  </div>
-					</form>
-
-
-				</div>
-				<div class="row">
-					<div class="col-md-12">
-						<div class="card">
-							<h5 class="card-header">
-								Mais detalhe sobre o instrutor
-							</h5>
-							<div class="card-body">
-								<p class="card-text">
-									<img class="img-thumbnail float-left mr-3" alt="Foto de Luciano Ramalho" src="{% static 'img/luciano-ramalho.jpg' %}" />
-									Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+   {% block body %}{% endblock %}
 
 	<footer class="main-footer mt-5 pt-4 text-light">
 		<div class="container">
