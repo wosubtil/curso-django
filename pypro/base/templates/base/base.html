@@ -34,30 +34,7 @@
 	</nav>
 
    {% block body %}{% endblock %}
-
-	<footer class="main-footer mt-5 pt-4 text-light">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<h3>Entre em Contato</h3>
-					<address>
-						+55 11 9999-9999
-						<br/>
-						<a class="text-light" href="mailto:contato@contato.com.br">contato@contato.com.br</a>
-					</address>
-				</div>
-			</div>
-		</div>
-		<div class="rigths pb-4">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						{% now 'Y' %} Python Pro. Todos os Direitos Reservados
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+   {% include 'base/footer.html' with contato_email='contato@contato.com.br' only %}
 
   </body>
 </html>
