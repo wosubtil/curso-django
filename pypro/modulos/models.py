@@ -15,5 +15,5 @@ class Modulo(OrderedModel):
     def __str__(self):
         return self.titulo
 
-    def get_absulute_url(self):
-        return reverse('modulos:detalhes', kwargs={'slug': self.slug})
+    def get_absolute_url(self):
+        return reverse('modulos:detalhe', kwargs={'slug': self.slug})
